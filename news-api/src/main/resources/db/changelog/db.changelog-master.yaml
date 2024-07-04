@@ -1,0 +1,73 @@
+databaseChangeLog:
+  - changeSet:
+      id: schema-0.0.1
+      author: news team
+      changes:
+        - createTable:
+            tableName: news
+            columns:
+              - column:
+                  name: news_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+              - column:
+                  name: title
+                  type: varchar(255)
+              - column:
+                  name: details
+                  type: varchar(1000)
+              - column:
+                  name: reported_by
+                  type: varchar(255)
+              - column:
+                  name: reported_at
+                  type: DATETIME
+        - addPrimaryKey:
+            tableName: news
+            columnNames: news_id
+            constraintName: news_pk
+  - changeSet:
+      id: data-0.0.1
+      author: news team
+      changes:
+        - insert:
+            tableName: news
+            columns:
+              - column:
+                  name: news_id
+                  value: '1'
+              - column:
+                  name: title
+                  value: India Won T20 World Cup
+              - column:
+                  name: details
+                  value: India Beat South Africa in Finals
+              - column:
+                  name: reported_by
+                  value: Ayush
+              - column:
+                  name: reported_at
+                  value: '2000-01-01T12:00:00'
+  - changeSet:
+      id: data-0.0.2
+      author: news team
+      changes:
+        - insert:
+            tableName: news
+            columns:
+              - column:
+                  name: news_id
+                  value: '2'
+              - column:
+                  name: title
+                  value: Upset
+              - column:
+                  name: details
+                  value: USA Beat Pakistan
+              - column:
+                  name: reported_by
+                  value: Sikander
+              - column:
+                  name: reported_at
+                  value: '2001-01-01T12:00:00'
