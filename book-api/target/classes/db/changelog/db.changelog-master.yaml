@@ -1,0 +1,82 @@
+databaseChangeLog:
+  - changeSet:
+      id: schema-0.0.1
+      author: books team
+      changes:
+        - createTable:
+            tableName: books
+            columns:
+              - column:
+                  name: book_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+              - column:
+                  name: title
+                  type: varchar(255)
+              - column:
+                  name: description
+                  type: varchar(1000)
+              - column:
+                  name: author
+                  type: varchar(255)
+              - column:
+                  name: year
+                  type: bigint
+              - column:
+                  name: published_at
+                  type: DATETIME
+        - addPrimaryKey:
+            tableName: books
+            columnNames: book_id
+            constraintName: book_pk
+  - changeSet:
+      id: data-0.0.1
+      author: book team
+      changes:
+        - insert:
+            tableName: books
+            columns:
+              - column:
+                  name: book_id
+                  value: '1'
+              - column:
+                  name: title
+                  value: The 48 Laws of Power
+              - column:
+                  name: description
+                  value: Best Seller
+              - column:
+                  name: author
+                  value: Robert Greene
+              - column:
+                  name: year
+                  value: '2024'
+              - column:
+                  name: published_at
+                  value: '2000-01-01T12:00:00'
+  - changeSet:
+      id: data-0.0.2
+      author: book team
+      changes:
+        - insert:
+            tableName: books
+            columns:
+              - column:
+                  name: book_id
+                  value: '2'
+              - column:
+                  name: title
+                  value: The 49 Laws of Power
+              - column:
+                  name: description
+                  value: Not Best Seller
+              - column:
+                  name: author
+                  value: Robert White
+              - column:
+                  name: year
+                  value: '2025'
+              - column:
+                  name: published_at
+                  value: '2001-01-01T12:00:00'
