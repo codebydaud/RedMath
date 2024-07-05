@@ -10,3 +10,6 @@ spring:
     hibernate:
       ddl-auto: none
     open-in-view: false
+  api:
+    security:
+      ignored: /api/v1/news,/api/v1/news/**
