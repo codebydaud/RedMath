@@ -49,54 +49,54 @@ public class BookApiTests {
     }
 
     @Test
-    @WithMockUser(username = "admin", roles = {"admin","author"})
+    @WithMockUser(username = "admin", roles = {"admin", "author"})
     public void testCreateBookSuccess() throws Exception {
         mockMvc.perform(MockMvcRequestBuilders.post("/api/v1/books")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content("{ \"title\": \"Sample Book\", \"description\": \"Sample Description\" }"))
-                .andDo(MockMvcResultHandlers.print()) // Print request and response details (optional)
-                .andExpect(MockMvcResultMatchers.status().isCreated()) // Expect HTTP 201 Created status// Expect Location header
-                .andExpect(MockMvcResultMatchers.content().contentType(MediaType.APPLICATION_JSON_VALUE)) // Expect JSON response
-                .andExpect(MockMvcResultMatchers.jsonPath("$.title").value("Sample Book")) // Validate response JSON
+                .andDo(MockMvcResultHandlers.print())
+                .andExpect(MockMvcResultMatchers.status().isCreated())
+                .andExpect(MockMvcResultMatchers.content().contentType(MediaType.APPLICATION_JSON_VALUE))
+                .andExpect(MockMvcResultMatchers.jsonPath("$.title").value("Sample Book"))
                 .andExpect(MockMvcResultMatchers.jsonPath("$.description").value("Sample Description"));
     }
 
     @Test
-    @WithMockUser(username = "admin", roles = {"admin","editor"})
+    @WithMockUser(username = "admin", roles = {"admin", "editor"})
     public void testUpdateBookSuccess() throws Exception {
         mockMvc.perform(MockMvcRequestBuilders.put("/api/v1/books/1")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content("{ \"title\": \"Update Title\", \"description\": \"Update Description\" }"))
-                .andDo(MockMvcResultHandlers.print()) // Print request and response details (optional)
-                .andExpect(MockMvcResultMatchers.status().isOk()) // Expect HTTP 201 Created status// Expect Location header
-                .andExpect(MockMvcResultMatchers.content().contentType(MediaType.APPLICATION_JSON_VALUE)) // Expect JSON response
-                .andExpect(MockMvcResultMatchers.jsonPath("$.title").value("Update Title")) // Validate response JSON
+                .andDo(MockMvcResultHandlers.print())
+                .andExpect(MockMvcResultMatchers.status().isOk())
+                .andExpect(MockMvcResultMatchers.content().contentType(MediaType.APPLICATION_JSON_VALUE))
+                .andExpect(MockMvcResultMatchers.jsonPath("$.title").value("Update Title"))
                 .andExpect(MockMvcResultMatchers.jsonPath("$.description").value("Update Description"));
     }
 
     @Test
-    @WithMockUser(username = "admin", roles = {"admin","editor"})
-    public void testUpdateBookNotSuccess() throws Exception {
+    @WithMockUser(username = "admin", roles = {"admin", "editor"})
+    public void testUpdateNonExistingBook() throws Exception {
         mockMvc.perform(MockMvcRequestBuilders.put("/api/v1/books/3")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content("{ \"title\": \"Update Title\", \"description\": \"Update Description\" }"))
-                .andDo(MockMvcResultHandlers.print()) // Print request and response details (optional)
-                .andExpect(MockMvcResultMatchers.status().isNotFound()); // Expect HTTP 201 Created status// Expect Location header
+                .andDo(MockMvcResultHandlers.print())
+                .andExpect(MockMvcResultMatchers.status().isNotFound());
     }
 
     @Test
     @WithMockUser(username = "admin", roles = {"admin"})
     public void testDeleteBookSuccess() throws Exception {
         mockMvc.perform(MockMvcRequestBuilders.delete("/api/v1/books/2"))
-                .andDo(MockMvcResultHandlers.print()) // Print request and response details (optional)
-                .andExpect(MockMvcResultMatchers.status().isNoContent()); // Expect HTTP 201 Created status// Expect Location header
+                .andDo(MockMvcResultHandlers.print())
+                .andExpect(MockMvcResultMatchers.status().isNoContent());
     }
 
     @Test
     @WithMockUser(username = "admin", roles = {"admin"})
-    public void testDeleteBookNotSuccess() throws Exception {
+    public void testDeleteNonExistingBook() throws Exception {
         mockMvc.perform(MockMvcRequestBuilders.delete("/api/v1/books/9"))
-                .andDo(MockMvcResultHandlers.print()) // Print request and response details (optional)
-                .andExpect(MockMvcResultMatchers.status().isNotFound()); // Expect HTTP 201 Created status// Expect Location header
+                .andDo(MockMvcResultHandlers.print())
+                .andExpect(MockMvcResultMatchers.status().isNotFound());
     }
 }
