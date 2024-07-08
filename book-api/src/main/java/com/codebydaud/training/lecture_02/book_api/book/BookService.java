@@ -17,11 +17,11 @@ public class BookService {
         this.bookRepository = bookRepository;
     }
 
-    public Optional<Book> findById(Long bookId) {
+    public Optional<Book> findBookById(Long bookId) {
         return bookRepository.findById(bookId);
     }
 
-    public List<Book> findAll(Integer page, Integer size) {
+    public List<Book> findAllBooks(Integer page, Integer size) {
         if (page < 0) {
             page = 0;
         }
@@ -31,7 +31,7 @@ public class BookService {
         return bookRepository.findAll(PageRequest.of(page, size)).getContent();
     }
 
-    public Book create(Book book) {
+    public Book createBook(Book book) {
         book.setBookId(System.currentTimeMillis());
         String username = SecurityContextHolder.getContext().getAuthentication().getName();
         book.setAuthor(username);
@@ -39,7 +39,7 @@ public class BookService {
         return bookRepository.save(book);
     }
 
-    public Optional<Book> update(Long bookId, Book book) {
+    public Optional<Book> updateBook(Long bookId, Book book) {
         Optional<Book> existing = bookRepository.findById(bookId);
         if (existing.isPresent()) {
             existing.get().setTitle(book.getTitle());
@@ -49,7 +49,7 @@ public class BookService {
         return existing;
     }
 
-    public boolean delete(Long bookId) {
+    public boolean deleteBook(Long bookId) {
        if(bookRepository.existsById(bookId)) {
            bookRepository.deleteById(bookId);
            return true;

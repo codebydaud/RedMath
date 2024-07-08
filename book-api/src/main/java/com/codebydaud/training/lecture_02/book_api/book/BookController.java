@@ -18,8 +18,8 @@ public class BookController {
     }
 
     @GetMapping("/api/v1/books/{bookId}")
-    public ResponseEntity<Book> getBook(@PathVariable("bookId") Long bookId) {
-        Optional<Book> book = bookService.findById(bookId);
+    public ResponseEntity<Book> getBookById(@PathVariable("bookId") Long bookId) {
+        Optional<Book> book = bookService.findBookById(bookId);
         if(book.isEmpty())
         {
             return ResponseEntity.notFound().build();
@@ -28,22 +28,22 @@ public class BookController {
     }
 
     @GetMapping("/api/v1/books")
-    public ResponseEntity<List<Book>> get(@RequestParam(name = "page", defaultValue = "0") Integer page,
+    public ResponseEntity<List<Book>> getAllBooks(@RequestParam(name = "page", defaultValue = "0") Integer page,
                                           @RequestParam(name = "size", defaultValue = "1000") Integer size) {
-        return ResponseEntity.ok(bookService.findAll(page, size));
+        return ResponseEntity.ok(bookService.findAllBooks(page, size));
     }
 
     @PreAuthorize("hasAnyAuthority('admin','author')")
     @PostMapping("/api/v1/books")
-    public ResponseEntity<Book> create(@RequestBody Book book) {
-        book = bookService.create(book);
+    public ResponseEntity<Book> createBook(@RequestBody Book book) {
+        book = bookService.createBook(book);
         return ResponseEntity.created(URI.create("/api/v1/books/" + book.getBookId())).body(book);
     }
 
     @PreAuthorize("hasAnyAuthority('admin','editor')")
     @PutMapping("/api/v1/books/{bookId}")
-    public ResponseEntity<Book> update(@PathVariable("bookId") Long bookId, @RequestBody Book book) {
-        Optional<Book> saved = bookService.update(bookId, book);
+    public ResponseEntity<Book> updateBook(@PathVariable("bookId") Long bookId, @RequestBody Book book) {
+        Optional<Book> saved = bookService.updateBook(bookId, book);
         if (saved.isEmpty()) {
             return ResponseEntity.notFound().build();
         }
@@ -52,8 +52,8 @@ public class BookController {
 
     @PreAuthorize("hasAnyAuthority('admin')")
     @DeleteMapping("/api/v1/books/{bookId}")
-    public ResponseEntity<Void> delete(@PathVariable("bookId") Long bookId) {
-        boolean deleted=bookService.delete(bookId);
+    public ResponseEntity<Void> deleteBook(@PathVariable("bookId") Long bookId) {
+        boolean deleted=bookService.deleteBook(bookId);
         if(!deleted)
         {
             return ResponseEntity.notFound().build();
