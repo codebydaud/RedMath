@@ -38,6 +38,7 @@ public class BookService {
         book.setPublishedAt(LocalDateTime.now());
         return bookRepository.save(book);
     }
+
     public Optional<Book> update(Long bookId, Book book) {
         Optional<Book> existing = bookRepository.findById(bookId);
         if (existing.isPresent()) {
@@ -46,5 +47,13 @@ public class BookService {
             existing = Optional.of(bookRepository.save(existing.get()));
         }
         return existing;
+    }
+
+    public boolean delete(Long bookId) {
+       if(bookRepository.existsById(bookId)) {
+           bookRepository.deleteById(bookId);
+           return true;
+       }
+       return false;
     }
 }

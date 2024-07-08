@@ -32,12 +32,14 @@ public class BookController {
                                           @RequestParam(name = "size", defaultValue = "1000") Integer size) {
         return ResponseEntity.ok(bookService.findAll(page, size));
     }
+
     @PreAuthorize("hasAnyAuthority('admin','author')")
     @PostMapping("/api/v1/books")
     public ResponseEntity<Book> create(@RequestBody Book book) {
         book = bookService.create(book);
         return ResponseEntity.created(URI.create("/api/v1/books/" + book.getBookId())).body(book);
     }
+
     @PreAuthorize("hasAnyAuthority('admin','editor')")
     @PutMapping("/api/v1/books/{bookId}")
     public ResponseEntity<Book> update(@PathVariable("bookId") Long bookId, @RequestBody Book book) {
@@ -46,5 +48,16 @@ public class BookController {
             return ResponseEntity.notFound().build();
         }
         return ResponseEntity.ok(saved.get());
+    }
+
+    @PreAuthorize("hasAnyAuthority('admin')")
+    @DeleteMapping("/api/v1/books/{bookId}")
+    public ResponseEntity<Void> delete(@PathVariable("bookId") Long bookId) {
+        boolean deleted=bookService.delete(bookId);
+        if(!deleted)
+        {
+            return ResponseEntity.notFound().build();
+        }
+        return ResponseEntity.noContent().build();
     }
 }
