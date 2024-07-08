@@ -16,6 +16,5 @@ public class Book {
     private String title;
     private String description;
     private String author;
-    private Long year;
     private LocalDateTime publishedAt;
 }

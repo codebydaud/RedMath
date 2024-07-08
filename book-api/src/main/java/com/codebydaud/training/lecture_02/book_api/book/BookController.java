@@ -28,7 +28,7 @@ public class BookController {
 
     @GetMapping("/api/v1/books")
     public ResponseEntity<List<Book>> get(@RequestParam(name = "page", defaultValue = "0") Integer page,
-                                          @RequestParam(name = "page", defaultValue = "1000") Integer size) {
+                                          @RequestParam(name = "size", defaultValue = "1000") Integer size) {
         return ResponseEntity.ok(bookService.findAll(page, size));
     }
 

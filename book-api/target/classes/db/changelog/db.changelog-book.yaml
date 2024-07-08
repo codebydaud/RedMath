@@ -22,9 +22,6 @@ databaseChangeLog:
                   name: author
                   type: varchar(255)
               - column:
-                  name: year
-                  type: bigint
-              - column:
                   name: published_at
                   type: DATETIME
   - changeSet:
@@ -47,9 +44,6 @@ databaseChangeLog:
                   name: author
                   value: Robert Greene
               - column:
-                  name: year
-                  value: '2024'
-              - column:
                   name: published_at
                   value: '2000-01-01T12:00:00'
   - changeSet:
@@ -71,9 +65,6 @@ databaseChangeLog:
               - column:
                   name: author
                   value: Robert White
-              - column:
-                  name: year
-                  value: '2025'
               - column:
                   name: published_at
                   value: '2001-01-01T12:00:00'
