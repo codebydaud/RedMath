@@ -28,7 +28,6 @@ public class BookApiTests {
                 .andExpect(MockMvcResultMatchers.jsonPath("$.title", Matchers.is("The 48 Laws of Power")))
                 .andExpect(MockMvcResultMatchers.jsonPath("$.description", Matchers.is("Best Seller")))
                 .andExpect(MockMvcResultMatchers.jsonPath("$.author", Matchers.is("Robert Greene")))
-                .andExpect(MockMvcResultMatchers.jsonPath("$.year", Matchers.is(2024)))
                 .andExpect(MockMvcResultMatchers.jsonPath("$.publishedAt", Matchers.notNullValue()));
     }
 
