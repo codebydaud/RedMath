@@ -8,11 +8,15 @@ import org.springframework.web.bind.annotation.*;
 import java.net.URI;
 import java.util.List;
 import java.util.Optional;
+import java.util.concurrent.CompletableFuture;
+import org.springframework.http.HttpStatus;
+
 
 @RestController
 public class BookController {
 
     private final BookService bookService;
+
     BookController(BookService bookService) {
         this.bookService = bookService;
     }
@@ -20,8 +24,7 @@ public class BookController {
     @GetMapping("/api/v1/books/{bookId}")
     public ResponseEntity<Book> getBookById(@PathVariable("bookId") Long bookId) {
         Optional<Book> book = bookService.findBookById(bookId);
-        if(book.isEmpty())
-        {
+        if (book.isEmpty()) {
             return ResponseEntity.notFound().build();
         }
         return ResponseEntity.ok(book.get());
@@ -29,7 +32,7 @@ public class BookController {
 
     @GetMapping("/api/v1/books")
     public ResponseEntity<List<Book>> getAllBooks(@RequestParam(name = "page", defaultValue = "0") Integer page,
-                                          @RequestParam(name = "size", defaultValue = "1000") Integer size) {
+                                                  @RequestParam(name = "size", defaultValue = "1000") Integer size) {
         return ResponseEntity.ok(bookService.findAllBooks(page, size));
     }
 
@@ -50,12 +53,11 @@ public class BookController {
         return ResponseEntity.ok(saved.get());
     }
 
-    @PreAuthorize("hasAnyAuthority('admin')")
+    @PreAuthorize("hasAuthority('admin')")
     @DeleteMapping("/api/v1/books/{bookId}")
     public ResponseEntity<Void> deleteBook(@PathVariable("bookId") Long bookId) {
-        boolean deleted=bookService.deleteBook(bookId);
-        if(!deleted)
-        {
+        boolean deleted = bookService.deleteBook(bookId);
+        if (!deleted) {
             return ResponseEntity.notFound().build();
         }
         return ResponseEntity.noContent().build();

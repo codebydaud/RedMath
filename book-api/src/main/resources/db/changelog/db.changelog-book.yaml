@@ -1,7 +1,7 @@
 databaseChangeLog:
   - changeSet:
       id: schema-book-0.0.1
-      author: books team
+      author: book team
       changes:
         - createTable:
             tableName: books
