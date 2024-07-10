@@ -1,0 +1,17 @@
+Chapter: 7
+
+
+Q.1 What is the recommended approach to minimise NullPointerException?
+
+	a) Implement defensive null checks in all methods.
+	b) Always catch NullPointerException at the top level of application.
+	c) Avoid returning Null from methods and prefer using special case patterns or empty collections.
+	d) None of these
+
+
+Q.2 What is the primary advantage of using try-catch-finally block structure?
+
+	a) It ensures that no errors occur during program execution
+	b) It ensures the consistent program state.
+	c) It completely eliminates the need for handling exceptions.
+	d) It reduces the number of exceptions thrown by the program.
