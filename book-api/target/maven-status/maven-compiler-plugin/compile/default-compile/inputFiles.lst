@@ -1,0 +1,14 @@
+C:\Users\muhammad.daud.rizvi\Downloads\book-api\src\main\java\com\codebydaud\training\lecture_02\book_api\Application.java
+C:\Users\muhammad.daud.rizvi\Downloads\book-api\src\main\java\com\codebydaud\training\lecture_02\book_api\book\Book.java
+C:\Users\muhammad.daud.rizvi\Downloads\book-api\src\main\java\com\codebydaud\training\lecture_02\book_api\book\BookController.java
+C:\Users\muhammad.daud.rizvi\Downloads\book-api\src\main\java\com\codebydaud\training\lecture_02\book_api\book\BookRepository.java
+C:\Users\muhammad.daud.rizvi\Downloads\book-api\src\main\java\com\codebydaud\training\lecture_02\book_api\book\BookService.java
+C:\Users\muhammad.daud.rizvi\Downloads\book-api\src\main\java\com\codebydaud\training\lecture_02\book_api\config\ApiProperties.java
+C:\Users\muhammad.daud.rizvi\Downloads\book-api\src\main\java\com\codebydaud\training\lecture_02\book_api\config\ApiSecurityConfiguration.java
+C:\Users\muhammad.daud.rizvi\Downloads\book-api\src\main\java\com\codebydaud\training\lecture_02\book_api\news\News.java
+C:\Users\muhammad.daud.rizvi\Downloads\book-api\src\main\java\com\codebydaud\training\lecture_02\book_api\news\NewsApiClient.java
+C:\Users\muhammad.daud.rizvi\Downloads\book-api\src\main\java\com\codebydaud\training\lecture_02\book_api\news\NewsController.java
+C:\Users\muhammad.daud.rizvi\Downloads\book-api\src\main\java\com\codebydaud\training\lecture_02\book_api\news\NewsResponse.java
+C:\Users\muhammad.daud.rizvi\Downloads\book-api\src\main\java\com\codebydaud\training\lecture_02\book_api\user\User.java
+C:\Users\muhammad.daud.rizvi\Downloads\book-api\src\main\java\com\codebydaud\training\lecture_02\book_api\user\UserRepository.java
+C:\Users\muhammad.daud.rizvi\Downloads\book-api\src\main\java\com\codebydaud\training\lecture_02\book_api\user\UserService.java

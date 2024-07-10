@@ -1,0 +1,36 @@
+spring:
+  h2:
+    console:
+      enabled: true
+  datasource:
+    url: jdbc:h2:mem:books
+    username: test
+    password: test
+  jpa:
+    hibernate:
+      ddl-auto: none
+    open-in-view: false
+  security:
+    user:
+      name: test
+      password: test
+      roles: AUTHOR,EDITOR,ADMIN
+
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+api:
+  security:
+    ignored: /api/v1/books,/api/v1/books/**,/swagger-ui/**,/v3/api-docs,/v3/api-docs/**,/index.html,/index.js
+
+logging:
+  file:
+    name: target/books.log
+  level:
+    '[org.springframework.security]': trace

@@ -1,0 +1,14 @@
+com\codebydaud\training\lecture_02\book_api\book\BookController.class
+com\codebydaud\training\lecture_02\book_api\news\NewsApiClient.class
+com\codebydaud\training\lecture_02\book_api\book\BookRepository.class
+com\codebydaud\training\lecture_02\book_api\book\Book.class
+com\codebydaud\training\lecture_02\book_api\config\ApiProperties.class
+com\codebydaud\training\lecture_02\book_api\book\BookService.class
+com\codebydaud\training\lecture_02\book_api\config\ApiSecurityConfiguration.class
+com\codebydaud\training\lecture_02\book_api\news\News.class
+com\codebydaud\training\lecture_02\book_api\user\User.class
+com\codebydaud\training\lecture_02\book_api\user\UserRepository.class
+com\codebydaud\training\lecture_02\book_api\user\UserService.class
+com\codebydaud\training\lecture_02\book_api\news\NewsController.class
+com\codebydaud\training\lecture_02\book_api\Application.class
+com\codebydaud\training\lecture_02\book_api\news\NewsResponse.class
