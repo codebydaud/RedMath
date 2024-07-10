@@ -1,6 +1,5 @@
 package com.codebydaud.training.lecture_02.book_api.book;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
@@ -8,8 +7,6 @@ import org.springframework.web.bind.annotation.*;
 import java.net.URI;
 import java.util.List;
 import java.util.Optional;
-import java.util.concurrent.CompletableFuture;
-import org.springframework.http.HttpStatus;
 
 
 @RestController
