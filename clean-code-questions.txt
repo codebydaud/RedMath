@@ -1,3 +1,23 @@
+Chapter: 2
+
+
+Q.1 Which of the following best describes "intention-revealing names" in programming?
+
+	a) Names that hide the purpose of variables and functions
+	b) Names that are very short and concise
+	c) Names that clearly communicate the intent of variables and functions
+	d) Names that are difficult to pronounce
+
+
+Q.2 What are the dangers of using disinformative names in programming?
+
+	a) They make code easier to understand
+	b) They can lead to misunderstandings and errors
+	c) They improve collaboration among developers
+	d) They have no impact on code quality
+
+
+
 Chapter: 7
 
 
@@ -15,5 +35,3 @@ Q.2 What is the primary advantage of using try-catch-finally block structure?
 	b) It ensures the consistent program state.
 	c) It completely eliminates the need for handling exceptions.
 	d) It reduces the number of exceptions thrown by the program.
-
-
