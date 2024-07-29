@@ -33,6 +33,9 @@ Q.2 What does a class with only public variables and no functions represent?
 	c) A fully encapsulated object with strict access control.s.
 	d) An object-oriented class with complex internal logic.
 
+Q.3 Which principle is violated if a method directly manipulates the internals of another object through multiple levels of method chaining? 
+Answer : The Law of Demeter
+
 
 Chapter: 7
 
