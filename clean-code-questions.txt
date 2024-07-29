@@ -16,6 +16,34 @@ Q.2 What are the dangers of using disinformative names in programming?
 	c) They improve collaboration among developers
 	d) They have no impact on code quality
 
+Q.3  what is the primary benefit of investing time in choosing meaningful names for variables, functions, and classes?
+
+	a) It improves code execution speed
+	b) It simplifies debugging by reducing code complexity
+	c) It makes code easier to understand and maintain
+	d) It minimizes the use of comments in the code
+
+Q.4 Which practice is described as contributing to disinformation in variable names?
+
+	a) Using descriptive names that clearly indicate their purpose.
+	b) Using number series for names like a1, a2, and aN.
+	c) Using different names for variables of the same type in different scopes.
+	d) Using common prefixes like temp or data for temporary variables.
+
+Q.5 What should method names ideally include?
+Answer: Verb or verb phrases
+
+Q.6 Which of the following method names could potentially be improved for clarity?
+
+	a) initializeSettings
+	b) loadDataFromServer
+	c) update
+	d) sendRequestToServer
+
+Chapter: 4
+
+Q.1 Which type of comment is specifically designed to prevent misuse of a code feature?
+Answe: Warning comments
 
 Chapter: 6
 
