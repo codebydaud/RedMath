@@ -17,6 +17,22 @@ Q.2 What are the dangers of using disinformative names in programming?
 	d) They have no impact on code quality
 
 
+Chapter: 6
+
+Q.1 What does the Law of Demeter suggest about method calls on objects?
+
+	a) Methods should only interact with their own class's methods.
+	b) Methods should extensively chain calls to enhance functionality.
+	c) Methods should call functions on objects returned by other methods.
+	d) Methods should interact with all objects in the calling chain
+
+Q.2 What does a class with only public variables and no functions represent?
+
+	a) An abstract interface with hidden implementation.
+	b) A data structure or DTO used for simple data transfer.
+	c) A fully encapsulated object with strict access control.s.
+	d) An object-oriented class with complex internal logic.
+
 
 Chapter: 7
 
