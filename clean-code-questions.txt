@@ -148,3 +148,12 @@ Q.4 What should you do when a function within a class wants to share certain var
 	b) Promote those variables to instance variables of the class
 	c) Pass those variables as arguments to all functions
 	d) Remove the sharing requirement
+
+Q.5 Which principle advises against writing methods that depend on a large number of instance variables?
+Answer: Single Responsibility Principle (SRP)
+
+Q.6 What principle states that a class or module should have one, and only one, reason to change?
+Answer: Single Responsibility Principle (SRP)
+
+Q.7 How is the size of a class measured?
+Answer: By the number of responsibilities
