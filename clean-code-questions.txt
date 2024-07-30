@@ -45,6 +45,20 @@ Chapter: 4
 Q.1 Which type of comment is specifically designed to prevent misuse of a code feature?
 Answe: Warning comments
 
+Q.2 What is the primary purpose of a comment that explains a test case?
+
+	a) To describe the test's expected outcome.
+	b) To document why the test case is turned off or has special conditions.
+	c) To provide information about the test case's implementation.
+	d) To detail the test case's performance metrics.
+
+Q.3 What should be done if a comment's explanation becomes too complex?
+
+	a) Rewrite the comment to make it simpler.
+	b) Refactor the code to simplify the explanation.
+	c) Remove the comment and rely on documentation instead.
+	d) Add more comments to clarify the initial comment.
+
 Chapter: 6
 
 Q.1 What does the Law of Demeter suggest about method calls on objects?
@@ -82,3 +96,55 @@ Q.2 What is the primary advantage of using try-catch-finally block structure?
 	b) It ensures the consistent program state.
 	c) It completely eliminates the need for handling exceptions.
 	d) It reduces the number of exceptions thrown by the program.
+
+Chapter: 9
+
+Q.1 What is a significant downside of "quick and dirty" tests?
+Answer: Higher Maintenance Cost
+
+Q.2 What type of tests are considered worse than no tests at all?
+Answer: Dirty tests.
+
+Q.3 What is the main goal of TDD (Test-Driven Development)?
+
+	a) To write tests after the code is completed.
+	b) To ensure that every function has a corresponding test.
+	c) To drive the design of the code through tests.
+	d) To maximize code performance through testing.
+
+Q.4 What is a common reason for tests becoming difficult to maintain?
+
+	a) They are too simple and lack detail.
+	b) They are not written by the same developer who wrote the code.
+	c) They are not kept clean and refactored regularly.
+	d) They rely too much on external dependencies.
+
+Chapter: 10
+
+Q.1 What should be done if a large function is broken into smaller functions but results in loss of cohesion?
+
+	a) Combine the functions back into one
+	b) Promote variables to instance variables
+	c) Split the functions into smaller classes
+	d) Increase the number of parameters passed
+
+Q.2 Which of the following best describes a cohesive class?
+
+	a) A class with many methods and few variables
+	b) A class where each method manipulates one or more of its variables
+	c) A class with many public variables
+	d) A class that extends multiple classes
+
+Q.3 Which of the following describes a maximally cohesive class?
+
+	a) Each method manipulates only one variable
+	b) Each method uses all of the class's variables
+	c) The class has more methods than variables
+	d) The class has more variables than methods
+
+Q.4 What should you do when a function within a class wants to share certain variables with other functions?
+
+	a) Convert those variables into global variables
+	b) Promote those variables to instance variables of the class
+	c) Pass those variables as arguments to all functions
+	d) Remove the sharing requirement
