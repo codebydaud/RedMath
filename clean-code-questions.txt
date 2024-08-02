@@ -40,6 +40,17 @@ Q.6 Which of the following method names could potentially be improved for clarit
 	c) update
 	d) sendRequestToServer
 
+
+Chapter: 3
+
+Q.1 What is a sign that a function is doing more than one thing?
+
+	a) If it contains a switch statement.
+	b) If it can be reasonably divided into sections.
+	c) If it only has one level of abstraction.
+	d) If it is named using descriptive names
+
+
 Chapter: 4
 
 Q.1 Which type of comment is specifically designed to prevent misuse of a code feature?
@@ -58,6 +69,37 @@ Q.3 What should be done if a comment's explanation becomes too complex?
 	b) Refactor the code to simplify the explanation.
 	c) Remove the comment and rely on documentation instead.
 	d) Add more comments to clarify the initial comment.
+
+
+Chapter: 5
+
+Q.1 What does vertical openness in code indicate?
+
+	a) Close association of concepts
+	b) Separation of different concepts
+	c) More lines of code
+	d) Less lines of code
+
+Q.2 What does vertical density in code suggest?
+
+	a) Concepts are closely related
+	b) Concepts are separated
+	c) The code is too complex
+	d) The code is too simple
+
+Q.3 Where should variables be declared according to the text?
+
+	a) At the beginning of the file
+	b) As close to their usage as possible
+	c) At the end of the file
+	d) In a separate file
+
+Q.4 What does conceptual affinity in code refer to?
+
+	a) Keeping related code close together
+	b) Separating unrelated code
+	c) Increasing the size of the code
+	d) Reducing the size of the code
 
 Chapter: 6
 
