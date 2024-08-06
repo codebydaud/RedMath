@@ -206,3 +206,31 @@ Answer: Single Responsibility Principle (SRP)
 
 Q.7 How is the size of a class measured?
 Answer: By the number of responsibilities
+
+Q.8 Why should variables and utility functions generally be kept private in Java classes?
+
+	a) To enhance the performance of the code
+	b) To ensure encapsulation and maintain control over class data
+	c) To avoid compilation errors
+	d) To comply with Java naming conventions
+
+Q.9 What is a common issue with classes that have too many responsibilities?
+
+	a) They are too small and lack functionality
+	b) They are difficult to navigate and understand
+	c) They are too specific and lack flexibility
+	d) They are always easier to maintain
+
+Q.10 What is a sign that a class may be too large and needs to be refactored?
+
+	a) The class has a small number of methods and variables
+	b) The class name is descriptive and concise
+	c) The class has too many methods and responsibilities
+	d) The class adheres to the Single Responsibility Principle
+
+Q.11 Which principle is violated when a class has multiple reasons to change?
+
+	a) The Principle of Least Privilege
+	b) The Single Responsibility Principle (SRP)
+	c) The Open/Closed Principle
+	d) The Dependency Inversion Principle
