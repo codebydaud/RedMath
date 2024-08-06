@@ -101,6 +101,13 @@ Q.4 What does conceptual affinity in code refer to?
 	c) Increasing the size of the code
 	d) Reducing the size of the code
 
+Q.5 What is the primary purpose of indentation in source code formatting?
+
+	a) To make the code more visually appealing
+	b) To create a hierarchy of scopes and improve readability
+	c) To reduce the number of lines in the code
+	d) To increase the complexity of the code
+
 Chapter: 6
 
 Q.1 What does the Law of Demeter suggest about method calls on objects?
