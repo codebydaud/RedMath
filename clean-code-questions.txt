@@ -127,6 +127,12 @@ Q.2 What does a class with only public variables and no functions represent?
 Q.3 Which principle is violated if a method directly manipulates the internals of another object through multiple levels of method chaining? 
 Answer : The Law of Demeter
 
+Q. 4 What is a more common form than DTOs for encapsulating data in Java?
+Answer: Bean
+
+Q.5 What is a DTO (Data Transfer Object)?
+Answer: A class with public variables and no functions
+
 
 Chapter: 7
 
